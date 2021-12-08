@@ -17,6 +17,7 @@
 		25C1A296275EEE0F00133FA6 /* StandardHomeMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1A295275EEE0F00133FA6 /* StandardHomeMovie.swift */; };
 		25C1A298275EEE5400133FA6 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1A297275EEE5400133FA6 /* GlobalHelpers.swift */; };
 		25C1A29A275EF0C700133FA6 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1A299275EF0C700133FA6 /* HomeVM.swift */; };
+		25C1A29F2760511E00133FA6 /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1A29E2760511E00133FA6 /* TopMoviePreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		25C1A295275EEE0F00133FA6 /* StandardHomeMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardHomeMovie.swift; sourceTree = "<group>"; };
 		25C1A297275EEE5400133FA6 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		25C1A299275EF0C700133FA6 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		25C1A29E2760511E00133FA6 /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				25C1A28D275EEB7200133FA6 /* HomeView.swift */,
+				25C1A29E2760511E00133FA6 /* TopMoviePreview.swift */,
 				25C1A299275EF0C700133FA6 /* HomeVM.swift */,
 			);
 			path = Home;
@@ -173,6 +176,7 @@
 				25C1A29A275EF0C700133FA6 /* HomeVM.swift in Sources */,
 				25C1A282275EEAFF00133FA6 /* ContentView.swift in Sources */,
 				25C1A296275EEE0F00133FA6 /* StandardHomeMovie.swift in Sources */,
+				25C1A29F2760511E00133FA6 /* TopMoviePreview.swift in Sources */,
 				25C1A294275EEDC500133FA6 /* Movie.swift in Sources */,
 				25C1A280275EEAFF00133FA6 /* NetflixClone_SwiftUIApp.swift in Sources */,
 			);
