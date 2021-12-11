@@ -37,18 +37,44 @@ struct TopMoviePreview: View {
                         
                         HStack {
                             Text(category)
+                                .font(.footnote)
                             
                             if !isCategoryLast(category) {
                                 Image(systemName: "circle.fill")
                                     .foregroundColor(.blue)
                                     .font(.system(size: 3))
                             }
-                            
                         }
                     }
                 }
-                
-                Text("Row of buttons")
+                HStack {
+                    Spacer()
+                    
+                    SmallVerticalButton(text: "My List",
+                                        isOnImage: "checkmark",
+                                        isOffImage: "plus",
+                                        isOn: true) {
+                        // action
+                    }
+                    
+                    Spacer()
+                    
+                    WhiteButton(text: "Play", imageName: "play.fill") {
+                        // action
+                    }
+                    .frame(width: 120)
+                    
+                    Spacer()
+                    
+                    SmallVerticalButton(text: "Info",
+                                        isOnImage: "info.circle",
+                                        isOffImage: "info.circle",
+                                        isOn: true) {
+                        // action
+                    }
+                    
+                    Spacer()
+                }
             }
         }.foregroundColor(.white)
     }
