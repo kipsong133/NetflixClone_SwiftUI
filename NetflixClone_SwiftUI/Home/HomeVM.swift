@@ -29,6 +29,6 @@ class HomeVM: ObservableObject {
         movies["Stand-Up Comdy"] = exampleMovies
         movies["New Releases"] = exampleMovies
         movies["Watch It Again"] = exampleMovies
-        movies["Sci"] = exampleMovies
+        movies["Sci-Fi Movies"] = exampleMovies
     }
 }
