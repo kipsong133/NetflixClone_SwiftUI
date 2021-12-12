@@ -40,8 +40,7 @@ struct CustomTabSwitcher: View {
                                     .foregroundColor(tab == currentTab ? Color.white : Color.gray)
                             })
                             .buttonStyle(PlainButtonStyle())
-                            .frame(width: widthForTab(tab), height: 30)
-                            
+                            .frame(width: widthForTab(tab), height: 30)   
                         }
                     }
                 }
@@ -55,7 +54,8 @@ struct CustomTabSwitcher: View {
                 }
                 
             case .trailers:
-                Text("TRAILERS")
+                TrailerList(trailers: movie.trailers)
+                
             case .more:
                 MoreLikeThis(movies: movie.moreLikeThisMovies)
             }
