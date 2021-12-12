@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		257DE29F2765C6D900E6CC47 /* CustomTabSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257DE29E2765C6D900E6CC47 /* CustomTabSwitcher.swift */; };
 		25B23BC22765AA4200DD6E0C /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B23BC12765AA4200DD6E0C /* MovieDetail.swift */; };
 		25B23BC42765B19400DD6E0C /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B23BC32765B19400DD6E0C /* Episode.swift */; };
 		25C1A280275EEAFF00133FA6 /* NetflixClone_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1A27F275EEAFF00133FA6 /* NetflixClone_SwiftUIApp.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		257DE29E2765C6D900E6CC47 /* CustomTabSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabSwitcher.swift; sourceTree = "<group>"; };
 		25B23BC12765AA4200DD6E0C /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		25B23BC32765B19400DD6E0C /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		25C1A27C275EEAFF00133FA6 /* NetflixClone_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixClone_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				25B23BC12765AA4200DD6E0C /* MovieDetail.swift */,
+				257DE29E2765C6D900E6CC47 /* CustomTabSwitcher.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				25C1A29F2760511E00133FA6 /* TopMoviePreview.swift in Sources */,
 				25C1A294275EEDC500133FA6 /* Movie.swift in Sources */,
 				25C1A280275EEAFF00133FA6 /* NetflixClone_SwiftUIApp.swift in Sources */,
+				257DE29F2765C6D900E6CC47 /* CustomTabSwitcher.swift in Sources */,
 				25C89BBF276491A5007D6B7E /* SmallVerticalButton.swift in Sources */,
 				25C89BC32764967F007D6B7E /* PlayButton.swift in Sources */,
 				25B23BC22765AA4200DD6E0C /* MovieDetail.swift in Sources */,

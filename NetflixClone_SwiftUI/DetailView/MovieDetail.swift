@@ -54,7 +54,35 @@ struct MovieDetail: View {
                         
                         CastInfo(movie: movie)
                         
-                        // 2. Personalized - where the user currently is
+                        HStack(spacing: 60) {
+                            SmallVerticalButton(text: "내가 찜한 콘텐츠",
+                                                isOnImage: "checkmark",
+                                                isOffImage: "plus",
+                                                isOn: true,
+                                                action: {
+                                // action
+                            })
+                            
+                            SmallVerticalButton(text: "평가",
+                                                isOnImage: "hand.thumbsup.fill",
+                                                isOffImage: "hand.thumbsup",
+                                                isOn: true,
+                                                action: {
+                                // action
+                            })
+                            
+                            SmallVerticalButton(text: "공유",
+                                                isOnImage: "square.and.arrow.up",
+                                                isOffImage: "square.and.arrow.up",
+                                                isOn: true,
+                                                action: {
+                                // action
+                            })
+                            Spacer()
+                        }
+                        .padding(.leading, 20)
+                        
+//                        CustomTabSwitcher()
                     }
                 }
                 
@@ -70,6 +98,8 @@ struct MovieDetail_Previews: PreviewProvider {
         MovieDetail(movie: exampleMovie3)
     }
 }
+
+
 
 struct MovieInfoSubheadline: View {
     var movie: Movie
