@@ -18,7 +18,8 @@ let exampleMovie1 = Movie(
     numberOfSeasons: 1,
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "바란 보 오다어, 안테 프리제",
-    cast: "루이스 호프만, 올리버 마수치, 와르디스 트러벨")
+    cast: "루이스 호프만, 올리버 마수치, 와르디스 트러벨",
+    moreLikeThisMovies: [exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6, exampleMovie7])
 
 let exampleMovie2 = Movie(
     id: UUID().uuidString,
@@ -30,7 +31,8 @@ let exampleMovie2 = Movie(
     numberOfSeasons: 2,
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "바란 보 오다어, 안테 프리제",
-    cast: "루이스 호프만, 올리버 마수치, 와르디스 트러벨")
+    cast: "루이스 호프만, 올리버 마수치, 와르디스 트러벨",
+    moreLikeThisMovies: [])
 
 let exampleMovie3 = Movie(
     id: UUID().uuidString,
@@ -43,6 +45,7 @@ let exampleMovie3 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "바란 보 오다어, 안테 프리제",
     cast: "루이스 호프만, 올리버 마수치, 와르디스 트러벨",
+    moreLikeThisMovies: [],
     promotionHeadline: "Best Rated Show")
 
 let exampleMovie4 = Movie(
@@ -56,6 +59,7 @@ let exampleMovie4 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "바란 보 오다어, 안테 프리제",
     cast: "루이스 호프만, 올리버 마수치, 와르디스 트러벨",
+    moreLikeThisMovies: [],
     promotionHeadline: "New episodes coming soon")
 
 let exampleMovie5 = Movie(
@@ -68,7 +72,8 @@ let exampleMovie5 = Movie(
     numberOfSeasons: 5,
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "바란 보 오다어, 안테 프리제",
-    cast: "루이스 호프만, 올리버 마수치, 와르디스 트러벨")
+    cast: "루이스 호프만, 올리버 마수치, 와르디스 트러벨",
+    moreLikeThisMovies: [])
 
 let exampleMovie6 = Movie(
     id: UUID().uuidString,
@@ -81,10 +86,27 @@ let exampleMovie6 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "바란 보 오다어, 안테 프리제",
     cast: "루이스 호프만, 올리버 마수치, 와르디스 트러벨",
+    moreLikeThisMovies: [],
     promotionHeadline: "Watch Season 6 Now")
 
-let exampleMovies: [Movie] = [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5,
-                              exampleMovie6]
+let exampleMovie7 = Movie(
+    id: UUID().uuidString,
+    name: "After Life",
+    thumbnailURL: URL(string:"https://picsum.photos/200/305")!,
+    categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
+    year: 2020,
+    rating: "TV-MA",
+    numberOfSeasons: 6,
+    defaultEpisodeInfo: exampleEpisodeInfo1,
+    creators: "바란 보 오다어, 안테 프리제",
+    cast: "루이스 호프만, 올리버 마수치, 와르디스 트러벨",
+    moreLikeThisMovies: [],
+    promotionHeadline: "Watch Season 6 Now")
+
+var exampleMovies: [Movie] {
+    return [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5,
+            exampleMovie6].shuffled()
+}
 
 let exampleEpisodeInfo1 = CurrentEpisodeInfo(episodeName: "1. 그들의 비밀", description: "2019년의 현재, 어린 소년이 실종된다. 공포와 혼돈에 사로잡힌 작은 마을. 하지만 몇몇 주민에게 이건 낯선 사건이 아니다. 기이하고도 비극적인 과거의 재현일뿐", season: 1, episode: 1)
 
