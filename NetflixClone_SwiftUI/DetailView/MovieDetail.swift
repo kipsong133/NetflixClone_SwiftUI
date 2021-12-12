@@ -43,6 +43,18 @@ struct MovieDetail: View {
                                 .bold()
                                 .font(.headline)
                         }
+                        
+                        PlayButton(text: "Play",
+                                   imageName: "play.fill",
+                                   backgroundColor: .red) {
+                            // action
+                        }
+                        
+                        CurrentEpisodeInfomation(movie: movie)
+                        
+                        CastInfo(movie: movie)
+                        
+                        // 2. Personalized - where the user currently is
                     }
                 }
                 
@@ -92,5 +104,46 @@ struct RatingView: View {
                 .bold()
         }
         .frame(width: 50, height: 20)
+    }
+}
+
+struct CastInfo: View {
+    var movie: Movie
+    
+    var body: some View {
+        VStack(spacing: 3) {
+            HStack {
+                Text("출연: \(movie.cast)")
+                Spacer()
+            }
+            
+            HStack {
+                Text("크리에이터: \(movie.creators)")
+                Spacer()
+            }
+        }
+        .font(.caption)
+        .foregroundColor(.gray)
+        .padding(.vertical, 10)
+    }
+}
+
+struct CurrentEpisodeInfomation: View {
+    var movie: Movie
+    
+    var body: some View {
+        Group {
+            HStack {
+                Text(movie.episodeInfoDisplay)
+                    .bold()
+                Spacer()
+            }.padding(.vertical, 4)
+            
+            HStack {
+                Text(movie.episodeDescriptionDisplay)
+                    .font(.subheadline)
+                Spacer()
+            }
+        }
     }
 }
