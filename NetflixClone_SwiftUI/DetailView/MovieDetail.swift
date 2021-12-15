@@ -10,6 +10,9 @@ import SwiftUI
 struct MovieDetail: View {
     var movie: Movie
     
+    @State private var showSeasonPicker = false
+    @State private var selectedSeason = 1
+    
     let screen = UIScreen.main.bounds
     
     var body: some View {
@@ -17,85 +20,124 @@ struct MovieDetail: View {
             Color.black
                 .edgesIgnoringSafeArea(.all)
             
-            VStack {
-                HStack {
-                    Spacer()
-                    
-                    Button(action: {
-                        // close this view
-                    }, label: {
-                        Image(systemName: "xmark.circle")
-                            .font(.system(size: 28))
-                    })
-                }
-                .padding(.horizontal, 22)
-                
-                ScrollView(.vertical, showsIndicators: false) {
-                    VStack {
+            ZStack {
+                VStack {
+                    HStack {
+                        Spacer()
                         
-                        StandardHomeMovie(movie: movie)
-                            .frame(width: screen.width / 2.5)
-                        
-                        MovieInfoSubheadline(movie: movie)
-                        
-                        if movie.promotionHeadline != nil {
-                            Text(movie.promotionHeadline!)
-                                .bold()
-                                .font(.headline)
-                        }
-                        
-                        PlayButton(text: "Play",
-                                   imageName: "play.fill",
-                                   backgroundColor: .red) {
-                            // action
-                        }
-                        
-                        CurrentEpisodeInfomation(movie: movie)
-                        
-                        CastInfo(movie: movie)
-                        
-                        HStack(spacing: 60) {
-                            SmallVerticalButton(text: "내가 찜한 콘텐츠",
-                                                isOnImage: "checkmark",
-                                                isOffImage: "plus",
-                                                isOn: true,
-                                                action: {
-                                // action
-                            })
-                            
-                            SmallVerticalButton(text: "평가",
-                                                isOnImage: "hand.thumbsup.fill",
-                                                isOffImage: "hand.thumbsup",
-                                                isOn: true,
-                                                action: {
-                                // action
-                            })
-                            
-                            SmallVerticalButton(text: "공유",
-                                                isOnImage: "square.and.arrow.up",
-                                                isOffImage: "square.and.arrow.up",
-                                                isOn: true,
-                                                action: {
-                                // action
-                            })
-                            Spacer()
-                        }
-                        .padding(.leading, 20)
-                        
-//                        CustomTabSwitcher()
+                        Button(action: {
+                            // close this view
+                        }, label: {
+                            Image(systemName: "xmark.circle")
+                                .font(.system(size: 28))
+                        })
                     }
+                    .padding(.horizontal, 22)
+                    
+                    ScrollView(.vertical, showsIndicators: false) {
+                        VStack {
+                            
+                            StandardHomeMovie(movie: movie)
+                                .frame(width: screen.width / 2.5)
+                            
+                            MovieInfoSubheadline(movie: movie)
+                            
+                            if movie.promotionHeadline != nil {
+                                Text(movie.promotionHeadline!)
+                                    .bold()
+                                    .font(.headline)
+                            }
+                            
+                            PlayButton(text: "Play",
+                                       imageName: "play.fill",
+                                       backgroundColor: .red) {
+                                // action
+                            }
+                            
+                            CurrentEpisodeInfomation(movie: movie)
+                            
+                            CastInfo(movie: movie)
+                            
+                            HStack(spacing: 60) {
+                                SmallVerticalButton(text: "내가 찜한 콘텐츠",
+                                                    isOnImage: "checkmark",
+                                                    isOffImage: "plus",
+                                                    isOn: true,
+                                                    action: {
+                                    // action
+                                })
+                                
+                                SmallVerticalButton(text: "평가",
+                                                    isOnImage: "hand.thumbsup.fill",
+                                                    isOffImage: "hand.thumbsup",
+                                                    isOn: true,
+                                                    action: {
+                                    // action
+                                })
+                                
+                                SmallVerticalButton(text: "공유",
+                                                    isOnImage: "square.and.arrow.up",
+                                                    isOffImage: "square.and.arrow.up",
+                                                    isOn: true,
+                                                    action: {
+                                    // action
+                                })
+                                Spacer()
+                            }
+                            .padding(.leading, 20)
+                            
+                            CustomTabSwitcher(tabs: [.episodes, .trailers, .more],
+                                              movie: movie,
+                                              showSeasonPicker: $showSeasonPicker,
+                                              selectedSeason: $selectedSeason)
+                        }
+                    }
+                    
+                    Spacer()
                 }
+                .foregroundColor(.white)
                 
-                Spacer()
+                if showSeasonPicker {
+                    Group {
+                        Color.black.opacity(0.9)
+                        
+                        VStack(spacing: 40) {
+                            Spacer()
+                            
+                            ForEach(0..<(movie.numberOfSeasons ?? 0)) { season in
+                                Button(action: {
+                                    self.selectedSeason = season + 1
+                                    self.showSeasonPicker = false
+                                }, label: {
+                                    Text("Season \(season + 1)")
+                                        .foregroundColor(selectedSeason == season + 1 ? .white : .gray)
+                                        .bold()
+                                        .font(selectedSeason == season + 1 ? .title : .title2)
+                                })
+                            }
+                            
+                            Spacer()
+                            
+                            Button(action: {
+                                self.showSeasonPicker = false
+                            }, label: {
+                                Image(systemName: "x.circle.fill")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 40))
+                                    .scaleEffect(x: 1.1) // 가로 방향으로 늘리기
+                            })
+                        }
+                    }
+                    .edgesIgnoringSafeArea(.all)
+                }
             }
-            .foregroundColor(.white)
         }
     }
 }
 
 struct MovieDetail_Previews: PreviewProvider {
     static var previews: some View {
-        MovieDetail(movie: exampleMovie3)
+        MovieDetail(movie: exampleMovie1)
     }
 }
 

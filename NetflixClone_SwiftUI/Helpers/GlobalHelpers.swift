@@ -23,6 +23,56 @@ let exampleTralier3 = Trailer(name: "The Mysterious", videoURL: exampleVideoURL,
 
 let exampleTraliers = [exampleTralier1, exampleTralier2, exampleTralier3]
 
+let episode1 = Episode(name: "Beginnings and Endings",
+                       season: 1,
+                       episodeNumber: 1,
+                       thumbnailImageURLString: "https://picsum.photos/300/102",
+                       description: "Six months after the disappearances, the polic form a task force. In 2052, Jonas learns that most of Winden perished in an apocalyptic event.",
+                       length: 53,
+                       videoURL: exampleVideoURL)
+
+let episode2 = Episode(name: "Darm",
+                       season: 1,
+                       episodeNumber: 2,
+                       thumbnailImageURLString: "https://picsum.photos/300/103",
+                       description: "Clausen and Charlotte interview Regina. The Stranger takes Hannah to 1987, where Caludia has an unnerving encounter and Egon visits an old nemesis.",
+                       length: 54,
+                       videoURL: exampleVideoURL)
+
+let episode3 = Episode(name: "Ghosts",
+                       season: 1,
+                       episodeNumber: 3,
+                       thumbnailImageURLString: "https://picsum.photos/300/104",
+                       description: "In 1954, a missing Helge returns, but he'll only speak to Noah. In 1987, Claudia brings the time machine to Tannhaus, and Egon questions Ulrixh again",
+                       length: 56,
+                       videoURL: exampleVideoURL)
+
+let episode4 = Episode(name: "Beginnings and Endings",
+                       season: 2,
+                       episodeNumber: 1,
+                       thumbnailImageURLString: "https://picsum.photos/300/105",
+                       description: "Six months after the disappearances, the polic form a task force. In 2052, Jonas learns that most of Winden perished in an apocalyptic event.",
+                       length: 53,
+                       videoURL: exampleVideoURL)
+
+let episode5 = Episode(name: "Darm",
+                       season: 2,
+                       episodeNumber: 2,
+                       thumbnailImageURLString: "https://picsum.photos/300/106",
+                       description: "Clausen and Charlotte interview Regina. The Stranger takes Hannah to 1987, where Caludia has an unnerving encounter and Egon visits an old nemesis.",
+                       length: 54,
+                       videoURL: exampleVideoURL)
+
+let episode6 = Episode(name: "Ghosts",
+                       season: 2,
+                       episodeNumber: 3,
+                       thumbnailImageURLString: "https://picsum.photos/300/107",
+                       description: "In 1954, a missing Helge returns, but he'll only speak to Noah. In 1987, Claudia brings the time machine to Tannhaus, and Egon questions Ulrixh again",
+                       length: 56,
+                       videoURL: exampleVideoURL)
+
+var allExampleEpisodes = [episode1, episode2, episode3, episode4, episode5, episode6]
+
 let exampleMovie1 = Movie(
     id: UUID().uuidString,
     name: "DARK",
@@ -30,11 +80,13 @@ let exampleMovie1 = Movie(
     categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
     year: 2020,
     rating: "TV-MA",
-    numberOfSeasons: 1,
+    numberOfSeasons: 2,
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "바란 보 오다어, 안테 프리제",
     cast: "루이스 호프만, 올리버 마수치, 와르디스 트러벨",
-    moreLikeThisMovies: [exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6, exampleMovie7], trailers: exampleTraliers)
+    moreLikeThisMovies: [exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6, exampleMovie7],
+    episodes: allExampleEpisodes,
+    trailers: exampleTraliers)
 
 let exampleMovie2 = Movie(
     id: UUID().uuidString,
