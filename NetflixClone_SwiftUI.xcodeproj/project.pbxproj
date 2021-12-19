@@ -32,6 +32,7 @@
 		25D1BEFB2769FD7D00A51949 /* EpisodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1BEFA2769FD7D00A51949 /* EpisodesView.swift */; };
 		25DE5D66276EE039009841E6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE5D65276EE039009841E6 /* SearchBar.swift */; };
 		25DE5D68276EE10D009841E6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE5D67276EE10D009841E6 /* Colors.swift */; };
+		25DE5D6A276EF94A009841E6 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE5D69276EF94A009841E6 /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		25D1BEFA2769FD7D00A51949 /* EpisodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesView.swift; sourceTree = "<group>"; };
 		25DE5D65276EE039009841E6 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		25DE5D67276EE10D009841E6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		25DE5D69276EF94A009841E6 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				25C1A297275EEE5400133FA6 /* GlobalHelpers.swift */,
 				25DE5D67276EE10D009841E6 /* Colors.swift */,
+				25DE5D69276EF94A009841E6 /* ActivityIndicator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				25C1A296275EEE0F00133FA6 /* StandardHomeMovie.swift in Sources */,
 				25C1A29F2760511E00133FA6 /* TopMoviePreview.swift in Sources */,
 				25C1A294275EEDC500133FA6 /* Movie.swift in Sources */,
+				25DE5D6A276EF94A009841E6 /* ActivityIndicator.swift in Sources */,
 				25C1A280275EEAFF00133FA6 /* NetflixClone_SwiftUIApp.swift in Sources */,
 				257DE2A12765D86D00E6CC47 /* MoreLikeThis.swift in Sources */,
 				258CFA07276EC43000EC5FF2 /* HomeStack.swift in Sources */,

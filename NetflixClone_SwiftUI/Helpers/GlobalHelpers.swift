@@ -192,3 +192,10 @@ extension String {
         return size.width
     }
 }
+
+// MARK: dismiss Keyboard
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil , from: nil, for: nil)
+    }
+}
