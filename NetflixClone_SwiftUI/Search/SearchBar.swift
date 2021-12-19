@@ -37,7 +37,6 @@ struct SearchBar: View {
                         isEditing = true
                     }
                 
-                
                 if !text.isEmpty {
                     if isLoading {
                         Button(action: {
