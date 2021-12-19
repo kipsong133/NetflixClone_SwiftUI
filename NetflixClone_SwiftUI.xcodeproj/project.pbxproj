@@ -30,6 +30,8 @@
 		25C89BBF276491A5007D6B7E /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C89BBE276491A5007D6B7E /* SmallVerticalButton.swift */; };
 		25C89BC32764967F007D6B7E /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C89BC22764967F007D6B7E /* PlayButton.swift */; };
 		25D1BEFB2769FD7D00A51949 /* EpisodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D1BEFA2769FD7D00A51949 /* EpisodesView.swift */; };
+		25DE5D66276EE039009841E6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE5D65276EE039009841E6 /* SearchBar.swift */; };
+		25DE5D68276EE10D009841E6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DE5D67276EE10D009841E6 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		25C89BBE276491A5007D6B7E /* SmallVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
 		25C89BC22764967F007D6B7E /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		25D1BEFA2769FD7D00A51949 /* EpisodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesView.swift; sourceTree = "<group>"; };
+		25DE5D65276EE039009841E6 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		25DE5D67276EE10D009841E6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				25C1A297275EEE5400133FA6 /* GlobalHelpers.swift */,
+				25DE5D67276EE10D009841E6 /* Colors.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 			children = (
 				25C1A281275EEAFF00133FA6 /* ContentView.swift */,
 				25C1A27F275EEAFF00133FA6 /* NetflixClone_SwiftUIApp.swift */,
+				25DE5D64276EE032009841E6 /* Search */,
 				257DE2A62765DDE900E6CC47 /* VideoPlayer */,
 				25B23BBF2765A9EC00DD6E0C /* Model */,
 				25B23BC02765A9FD00DD6E0C /* HelperViews */,
@@ -169,6 +175,14 @@
 				258CFA06276EC43000EC5FF2 /* HomeStack.swift */,
 			);
 			path = HomeViews;
+			sourceTree = "<group>";
+		};
+		25DE5D64276EE032009841E6 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				25DE5D65276EE039009841E6 /* SearchBar.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25D1BEFB2769FD7D00A51949 /* EpisodesView.swift in Sources */,
+				25DE5D68276EE10D009841E6 /* Colors.swift in Sources */,
 				25C1A298275EEE5400133FA6 /* GlobalHelpers.swift in Sources */,
 				257DE2A32765DC8400E6CC47 /* Trailer.swift in Sources */,
 				25B23BC42765B19400DD6E0C /* Episode.swift in Sources */,
@@ -261,6 +276,7 @@
 				25C1A280275EEAFF00133FA6 /* NetflixClone_SwiftUIApp.swift in Sources */,
 				257DE2A12765D86D00E6CC47 /* MoreLikeThis.swift in Sources */,
 				258CFA07276EC43000EC5FF2 /* HomeStack.swift in Sources */,
+				25DE5D66276EE039009841E6 /* SearchBar.swift in Sources */,
 				257DE29F2765C6D900E6CC47 /* CustomTabSwitcher.swift in Sources */,
 				257DE2AA2765E07700E6CC47 /* TrailerList.swift in Sources */,
 				25C89BBF276491A5007D6B7E /* SmallVerticalButton.swift in Sources */,
