@@ -28,7 +28,7 @@ struct HomeView: View {
             // main VStack
             ScrollView(showsIndicators: false) {
                 LazyVStack {
-                    
+                    // 최상단의 버튼들
                     TopRowButtons(topRowSelection: $topRowSelection,
                                   homeGenre: $homeGenre,
                                   showGenreSelection: $showGenreSelection,
@@ -46,13 +46,14 @@ struct HomeView: View {
                               movieDetailToShow: $movieDetailToShow)
                 }
             }
-            
+            // 화면전환을 위한 코드
             if movieDetailToShow != nil {
                 MovieDetail(movie: movieDetailToShow!, movieDetailToShow: $movieDetailToShow)
                     .animation(.easeIn) // TODO: deprecated 대응해야함
                     .transition(.opacity)
             }
             
+            // 섹션을 클릭 했을 때, UI
             if showTopRowSelection {
                 Group {
                     Color.black.opacity(0.9)
@@ -93,7 +94,7 @@ struct HomeView: View {
                 .font(.title2)
             }
             
-            
+            // 장르를 클릭했을 때, UI
             if showGenreSelection {
                 Group {
                     Color.black.opacity(0.9)
@@ -149,7 +150,7 @@ struct HomeView_Previews: PreviewProvider {
 }
 
 struct TopRowButtons: View {
-    
+    // 선택한 섹션과 장르에 맞게 UI update
     @Binding var topRowSelection: HomeTopRow
     @Binding var homeGenre: HomeGenre
     
