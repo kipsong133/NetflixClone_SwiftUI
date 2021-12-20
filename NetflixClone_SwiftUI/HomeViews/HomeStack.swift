@@ -31,8 +31,7 @@ struct HomeStack: View {
                                             andHomeRow: topRowSelection,
                                             andGenre: selectedGenre)) { movie in
                             StandardHomeMovie(movie: movie)
-                                .frame(width: 100, height: 200)
-                                .padding(.horizontal, 20)
+                                .frame(width: 135, height: 200)
                                 .onTapGesture(perform: {
                                     movieDetailToShow = movie
                                 })
@@ -40,6 +39,7 @@ struct HomeStack: View {
                     }
                 }
             }
+            .padding(.leading, 6)
         }
     }
 }
@@ -49,7 +49,7 @@ struct HomeStack_Previews: PreviewProvider {
         ZStack {
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            ScrollView {
+            ScrollView { // "HomeView" 에서 수직으로 스크롤 되도록 ScrollView로 감싸고 있음.
                 HomeStack(vm: HomeVM(),
                           topRowSelection: .home, selectedGenre: .AllGenres,
                           movieDetailToShow: .constant(nil))
