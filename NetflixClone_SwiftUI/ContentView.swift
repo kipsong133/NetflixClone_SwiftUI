@@ -109,11 +109,11 @@ struct ContentView: View {
                         Text("Downloads")
                     }.tag(3)
                 
-                Text("More")
-                    .tabItem {
-                        Image(systemName: "equal")
-                        Text("5")
-                    }.tag(4)
+//                Text("More")
+//                    .tabItem {
+//                        Image(systemName: "equal")
+//                        Text("5")
+//                    }.tag(4)
             }
             .accentColor(.white)
             
