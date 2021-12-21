@@ -20,6 +20,9 @@ struct HomeView: View {
     @State private var showGenreSelection = false
     @State private var showTopRowSelection = false
     
+    @Binding var showPreviewFullScreen: Bool
+    @Binding var previewStartingIndex: Int
+    
     var body: some View {
         ZStack {
             Color.black
@@ -42,12 +45,16 @@ struct HomeView: View {
                         .zIndex(-1) // adjust z-position for hierarchy
                     
                     /* 2. "MoviewPreviewRow"의 경우, 더이상 변할 가능성이 없기 때문에 자식 뷰에서 설정했음 */
-                    MoviePreviewRow(movies: exampleMovies)
+                    MoviePreviewRow(movies: exampleMovies,
+                                    showPreviewFullScreen: $showPreviewFullScreen,
+                                    previewStartingIndex: $previewStartingIndex)
                     
                     HomeStack(vm: vm,
                               topRowSelection: topRowSelection,
                               selectedGenre: homeGenre,
-                              movieDetailToShow: $movieDetailToShow)
+                              movieDetailToShow: $movieDetailToShow,
+                              showPreviewFullScreen: $showPreviewFullScreen,
+                              previewStartingIndex: $previewStartingIndex)
                 }
             }
             // 화면전환을 위한 코드
@@ -149,7 +156,9 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(
+            showPreviewFullScreen: .constant(false),
+            previewStartingIndex: .constant(0))
     }
 }
 

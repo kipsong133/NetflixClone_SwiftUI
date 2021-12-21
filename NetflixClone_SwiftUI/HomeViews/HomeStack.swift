@@ -15,6 +15,9 @@ struct HomeStack: View {
     var selectedGenre: HomeGenre
     @Binding var movieDetailToShow: Movie?
     
+    @Binding var showPreviewFullScreen: Bool
+    @Binding var previewStartingIndex: Int
+    
     var body: some View {
         ForEach(vm.allCategories, id: \.self) { category in
             VStack {
@@ -52,7 +55,9 @@ struct HomeStack_Previews: PreviewProvider {
             ScrollView { // "HomeView" 에서 수직으로 스크롤 되도록 ScrollView로 감싸고 있음.
                 HomeStack(vm: HomeVM(),
                           topRowSelection: .home, selectedGenre: .AllGenres,
-                          movieDetailToShow: .constant(nil))
+                          movieDetailToShow: .constant(nil),
+                          showPreviewFullScreen: .constant(false),
+                          previewStartingIndex: .constant(0))
             }
         }
         .foregroundColor(.white)
