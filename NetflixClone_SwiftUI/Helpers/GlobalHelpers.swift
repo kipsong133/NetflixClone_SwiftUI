@@ -86,7 +86,9 @@ let exampleMovie1 = Movie(
     cast: "루이스 호프만, 올리버 마수치, 와르디스 트러벨",
     moreLikeThisMovies: [exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6, exampleMovie7],
     episodes: allExampleEpisodes,
-    trailers: exampleTraliers)
+    trailers: exampleTraliers,
+    previewImageName: "darkPreview",
+    previewVideoURL: exampleVideoURL)
 
 let exampleMovie2 = Movie(
     id: UUID().uuidString,
@@ -99,7 +101,10 @@ let exampleMovie2 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "바란 보 오다어, 안테 프리제",
     cast: "루이스 호프만, 올리버 마수치, 와르디스 트러벨",
-    moreLikeThisMovies: [], trailers: exampleTraliers)
+    moreLikeThisMovies: [], trailers: exampleTraliers,
+    previewImageName: "ozarkPreview",
+    previewVideoURL: exampleVideoURL)
+
 
 let exampleMovie3 = Movie(
     id: UUID().uuidString,
@@ -113,7 +118,10 @@ let exampleMovie3 = Movie(
     creators: "바란 보 오다어, 안테 프리제",
     cast: "루이스 호프만, 올리버 마수치, 와르디스 트러벨",
     moreLikeThisMovies: [],
-    promotionHeadline: "Best Rated Show", trailers: exampleTraliers)
+    promotionHeadline: "Best Rated Show", trailers: exampleTraliers,
+    previewImageName: "dirtyJohnPreview",
+    previewVideoURL: exampleVideoURL)
+
 
 let exampleMovie4 = Movie(
     id: UUID().uuidString,
@@ -127,7 +135,10 @@ let exampleMovie4 = Movie(
     creators: "바란 보 오다어, 안테 프리제",
     cast: "루이스 호프만, 올리버 마수치, 와르디스 트러벨",
     moreLikeThisMovies: [],
-    promotionHeadline: "New episodes coming soon", trailers: exampleTraliers)
+    promotionHeadline: "New episodes coming soon", trailers: exampleTraliers,
+    previewImageName: "travelersPreview",
+    previewVideoURL: exampleVideoURL)
+
 
 let exampleMovie5 = Movie(
     id: UUID().uuidString,
@@ -140,7 +151,10 @@ let exampleMovie5 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "바란 보 오다어, 안테 프리제",
     cast: "루이스 호프만, 올리버 마수치, 와르디스 트러벨",
-    moreLikeThisMovies: [], trailers: exampleTraliers)
+    moreLikeThisMovies: [], trailers: exampleTraliers,
+    previewImageName: "whiteLinesPreview",
+    previewVideoURL: exampleVideoURL)
+
 
 let exampleMovie6 = Movie(
     id: UUID().uuidString,
@@ -154,7 +168,10 @@ let exampleMovie6 = Movie(
     creators: "바란 보 오다어, 안테 프리제",
     cast: "루이스 호프만, 올리버 마수치, 와르디스 트러벨",
     moreLikeThisMovies: [],
-    promotionHeadline: "Watch Season 6 Now", trailers: exampleTraliers)
+    promotionHeadline: "Watch Season 6 Now", trailers: exampleTraliers,
+    previewImageName: "dirtyJohnPreview",
+    previewVideoURL: exampleVideoURL)
+
 
 let exampleMovie7 = Movie(
     id: UUID().uuidString,
@@ -168,7 +185,10 @@ let exampleMovie7 = Movie(
     creators: "바란 보 오다어, 안테 프리제",
     cast: "루이스 호프만, 올리버 마수치, 와르디스 트러벨",
     moreLikeThisMovies: [],
-    promotionHeadline: "Watch Season 6 Now", trailers: exampleTraliers)
+    promotionHeadline: "Watch Season 6 Now", trailers: exampleTraliers,
+    previewImageName: "darkPreview",
+    previewVideoURL: exampleVideoURL)
+
 
 var exampleMovies: [Movie] {
     return [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5,
