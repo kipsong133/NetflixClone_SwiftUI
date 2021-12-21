@@ -34,12 +34,16 @@ struct HomeView: View {
                                   showGenreSelection: $showGenreSelection,
                                   showTopRowSelection: $showTopRowSelection)
                     
+                    // MARK: 두 개의 프리뷰를 다른 방식으로 frame을 잡은 이유
+                    /* 1. "TopMoviePreview"의 경우, 이미지 크기가 다양하기 때문에, 부모 뷰에서 설정해야했음 */
                     TopMoviePreview(movie: exampleMovie5)
                         .frame(width: screen.width)
                         .padding(.top, -110) // for starting y-position
                         .zIndex(-1) // adjust z-position for hierarchy
                     
-                    // Category
+                    /* 2. "MoviewPreviewRow"의 경우, 더이상 변할 가능성이 없기 때문에 자식 뷰에서 설정했음 */
+                    MoviePreviewRow(movies: exampleMovies)
+                    
                     HomeStack(vm: vm,
                               topRowSelection: topRowSelection,
                               selectedGenre: homeGenre,
