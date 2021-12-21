@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-let exampleVideoURL = URL(string: "https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4")!
+let exampleVideoURL = URL(string: "http://camendesign.com/code/video_for_everybody/test.html")!
 let exampleImageURL = URL(string: "https://picsum.photos/300/104")!
 let exampleImageURL2 = URL(string: "https://picsum.photos/300/105")!
 let exampleImageURL3 = URL(string: "https://picsum.photos/300/106")!
@@ -81,6 +81,7 @@ let exampleMovie1 = Movie(
     year: 2020,
     rating: "TV-MA",
     numberOfSeasons: 2,
+    accentColor: Color.blue,
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "바란 보 오다어, 안테 프리제",
     cast: "루이스 호프만, 올리버 마수치, 와르디스 트러벨",
@@ -192,7 +193,7 @@ let exampleMovie7 = Movie(
 
 var exampleMovies: [Movie] {
     return [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5,
-            exampleMovie6].shuffled()
+            exampleMovie6]
 }
 
 let exampleEpisodeInfo1 = CurrentEpisodeInfo(episodeName: "1. 그들의 비밀", description: "2019년의 현재, 어린 소년이 실종된다. 공포와 혼돈에 사로잡힌 작은 마을. 하지만 몇몇 주민에게 이건 낯선 사건이 아니다. 기이하고도 비극적인 과거의 재현일뿐", season: 1, episode: 1)

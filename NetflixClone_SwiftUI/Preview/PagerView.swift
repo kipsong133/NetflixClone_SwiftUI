@@ -14,6 +14,7 @@ struct PagerView<Content: View>: View {
     @Binding var translation: CGFloat
     let content: Content
     
+    
     init(
         pageCount: Int,
         currentIndex: Binding<Int>,
