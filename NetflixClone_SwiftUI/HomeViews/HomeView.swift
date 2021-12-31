@@ -17,6 +17,8 @@ struct HomeView: View {
     @State private var topRowSelection: HomeTopRow = .home
     @State private var homeGenre: HomeGenre = .AllGenres
     
+    
+    
     @State private var showGenreSelection = false
     @State private var showTopRowSelection = false
     
